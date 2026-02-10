@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Search, Bell, User } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Navbar() {
+  const { currentUser } = useAuth();
+
   return (
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
@@ -30,11 +33,24 @@ export default function Navbar() {
             <Bell className="w-5 h-5 text-text-secondary" />
             <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-purple-500 rounded-full" />
           </button>
-          <button className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-zinc-800/50 transition-colors">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center">
-              <User className="w-4 h-4 text-white" />
-            </div>
-          </button>
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-zinc-800/50 transition-colors">
+            {currentUser?.photoURL ? (
+              <img
+                src={currentUser.photoURL}
+                alt={currentUser.displayName || "User"}
+                className="w-8 h-8 rounded-full"
+              />
+            ) : (
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center">
+                <User className="w-4 h-4 text-white" />
+              </div>
+            )}
+            {currentUser?.displayName && (
+              <span className="text-sm text-text-primary font-medium hidden md:block">
+                {currentUser.displayName}
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </motion.nav>

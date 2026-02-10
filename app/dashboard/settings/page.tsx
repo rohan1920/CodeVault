@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { User, Shield, Bell, CreditCard } from "lucide-react";
+import UserProfile from "@/components/UserProfile";
 
 const settingsSections = [
   {
@@ -44,6 +45,11 @@ export default function SettingsPage() {
         </h1>
         <p className="text-text-secondary font-sans">Manage your account settings and preferences</p>
       </motion.div>
+
+      {/* User Profile */}
+      <div className="mb-8">
+        <UserProfile />
+      </div>
 
       {/* Settings Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
