@@ -37,7 +37,7 @@ export default function CodeVisual() {
           <div className="flex">
             <span className="text-zinc-600 w-8 inline-block text-right select-none">1</span>
             <span className="text-zinc-300 ml-4">
-              <span className="text-purple-400">import</span> <span className="text-blue-400">{`{ backup, encrypt }`}</span> <span className="text-purple-400">from</span> <span className="text-orange-400">'@codevault/sdk'</span>;
+              <span className="text-purple-400">import</span> <span className="text-blue-400">{`{ backup, encrypt }`}</span> <span className="text-purple-400">from</span> <span className="text-orange-400">&apos;@codevault/sdk&apos;</span>;
             </span>
           </div>
           <div className="flex">
@@ -58,13 +58,13 @@ export default function CodeVisual() {
           <div className="flex">
             <span className="text-zinc-600 w-8 inline-block text-right select-none">5</span>
             <span className="text-zinc-300 ml-4">
-              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-400">repository</span>: <span className="text-orange-400">'my-awesome-app'</span>,
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-400">repository</span>: <span className="text-orange-400">&apos;my-awesome-app&apos;</span>,
             </span>
           </div>
           <div className="flex">
             <span className="text-zinc-600 w-8 inline-block text-right select-none">6</span>
             <span className="text-zinc-300 ml-4">
-              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-400">algorithm</span>: <span className="text-orange-400">'AES-256-GCM'</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-green-400">algorithm</span>: <span className="text-orange-400">&apos;AES-256-GCM&apos;</span>
             </span>
           </div>
           <div className="flex">

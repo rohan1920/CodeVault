@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Search, Bell, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -35,9 +36,11 @@ export default function Navbar() {
           </button>
           <div className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-zinc-800/50 transition-colors">
             {currentUser?.photoURL ? (
-              <img
+              <Image
                 src={currentUser.photoURL}
                 alt={currentUser.displayName || "User"}
+                width={32}
+                height={32}
                 className="w-8 h-8 rounded-full"
               />
             ) : (

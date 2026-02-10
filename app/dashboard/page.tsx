@@ -31,7 +31,7 @@ export default function DashboardPage() {
         <h1 className="text-3xl font-mono font-bold text-text-primary mb-2">
           Dashboard <span className="text-text-muted">Overview</span>
         </h1>
-        <p className="text-text-secondary font-sans">Welcome back! Here's what's happening with your backups.</p>
+        <p className="text-text-secondary font-sans">Welcome back! Here&apos;s what&apos;s happening with your backups.</p>
       </motion.div>
 
       {/* Stats Grid */}

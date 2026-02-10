@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
 import { User, Mail, Edit2, Save, X, LogOut } from "lucide-react";
@@ -44,7 +45,7 @@ export default function UserProfile() {
       <div className="flex items-center gap-4 mb-6">
         <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center">
           {currentUser.photoURL ? (
-            <img src={currentUser.photoURL} alt="Profile" className="w-16 h-16 rounded-full" />
+            <Image src={currentUser.photoURL} alt="Profile" width={64} height={64} className="w-16 h-16 rounded-full" />
           ) : (
             <User className="w-8 h-8 text-white" />
           )}

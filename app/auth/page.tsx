@@ -440,7 +440,7 @@ export default function AuthPage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-6 text-center text-sm text-text-muted"
           >
-            By continuing, you agree to CodeVault's{" "}
+            By continuing, you agree to CodeVault&apos;s{" "}
             <Link href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
               Terms of Service
             </Link>{" "}
